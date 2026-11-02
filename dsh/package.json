@@ -1,0 +1,11 @@
+{
+  "name": "dsh-write-guard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "description": "agent-write-guard 的 DSH 原生适配层：把落盘断言挂到 fs/write-intent、fs/edit-intent、fs/observed 三条缝上",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-fs": "*"
+  }
+}

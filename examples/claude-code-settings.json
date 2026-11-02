@@ -1,0 +1,27 @@
+{
+  "_comment": "合并进 Claude Code 的 settings.json。路径按你自己的装法改。",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "python D:/tools/agent-write-guard/guard.py", "timeout": 20 }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "python D:/tools/agent-write-guard/guard.py", "timeout": 20 }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "python D:/tools/agent-write-guard/guard.py", "timeout": 20 }
+        ]
+      }
+    ]
+  }
+}

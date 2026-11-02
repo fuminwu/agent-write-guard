@@ -1,0 +1,11 @@
+# 把下面这段插进 DSH profile 的 cordis.patch.yml（<profile>/cordis.patch.yml）。
+# 路径按你自己的来改；python 用绝对路径最稳（PATH 里的 python 可能是 Microsoft Store 的壳）。
+- insert:
+    - id: write-guard
+      name: './plugins/dsh-write-guard/index.js'
+      config:
+        python: 'D:/Python/python.exe'
+        guard: 'D:/tools/agent-write-guard/guard.py'
+        cwd: 'D:/my-project'
+        timeoutMs: 20000
+        # log: 'D:/tools/agent-write-guard/boot.log'   # 省略则默认写在 guard.py 同目录
